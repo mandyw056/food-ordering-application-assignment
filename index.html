@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Restaurant - Online Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <a href="#" class="logo">
+            <i class="fas fa-utensils"></i> Amazing Restaurant
+        </a>
+        
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            <a href="#login" id="login-btn">Login</a>
+            <a href="#register" id="register-btn">Register</a>
+        </nav>
+        
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+    <div class="login-form-container">
+        <form action="">
+            <h3>Login</h3>
+            <input type="email" placeholder="Enter your email" class="box">
+            <input type="password" placeholder="Enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <input type="submit" value="Login now" class="btn">
+            <p>Don't have an account? <a href="#" id="register-link">Register now</a></p>
+            <i class="fas fa-times" id="close-login"></i>
+        </form>
+    </div>
+
+    <!-- Register Form -->
+    <div class="register-form-container">
+        <form action="">
+            <h3>Register</h3>
+            <input type="text" placeholder="Enter your name" class="box">
+            <input type="email" placeholder="Enter your email" class="box">
+            <input type="password" placeholder="Enter your password" class="box">
+            <input type="password" placeholder="Confirm your password" class="box">
+            <input type="submit" value="Register now" class="btn">
+            <p>Already have an account? <a href="#" id="login-link">Login now</a></p>
+            <i class="fas fa-times" id="close-register"></i>
+        </form>
+    </div>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>You can find yummy food here</h3>
+            <p>Just click Place Order button to order food online</p>
+            <a href="#menu" class="btn">Place Order</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <h1 class="heading">Our <span>Menu</span></h1>
+        
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="breakfast">Breakfast</button>
+            <button class="category-btn" data-category="lunch">Lunch</button>
+            <button class="category-btn" data-category="dinner">Dinner</button>
+            <button class="category-btn" data-category="dessert">Dessert</button>
+            <button class="category-btn" data-category="drinks">Drinks</button>
+        </div>
+        
+        <div class="box-container">
+            <!-- Menu Item 1 -->
+            <div class="box" data-category="breakfast">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/300x200/?pancakes" alt="Pancakes">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <h3>Fluffy Pancakes</h3>
+                    <p>Stack of 3 fluffy pancakes with maple syrup and butter</p>
+                    <div class="price">$8.99 <span>$12.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Menu Item 2 -->
+            <div class="box" data-category="lunch">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/300x200/?burger" alt="Burger">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <h3>Classic Burger</h3>
+                    <p>Beef patty with cheese, lettuce, tomato and special sauce</p>
+                    <div class="price">$10.99 <span>$14.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Menu Item 3 -->
+            <div class="box" data-category="dinner">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/300x200/?pasta" alt="Pasta">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <h3>Creamy Pasta</h3>
+                    <p>Fettuccine pasta with creamy alfredo sauce and mushrooms</p>
+                    <div class="price">$12.99 <span>$15.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Menu Item 4 -->
+            <div class="box" data-category="dessert">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/300x200/?icecream" alt="Ice Cream">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <h3>Chocolate Sundae</h3>
+                    <p>Vanilla ice cream with chocolate sauce, nuts and whipped cream</p>
+                    <div class="price">$5.99 <span>$7.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Menu Item 5 -->
+            <div class="box" data-category="drinks">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/300x200/?smoothie" alt="Smoothie">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <h3>Berry Smoothie</h3>
+                    <p>Mixed berry smoothie with yogurt and honey</p>
+                    <div class="price">$6.99 <span>$8.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Menu Item 6 -->
+            <div class="box" data-category="lunch">
+                <div class="image">
+                    <img src="https://source.unsplash.com/random/300x200/?salad" alt="Salad">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <h3>Caesar Salad</h3>
+                    <p>Fresh romaine lettuce with croutons, parmesan and caesar dressing</p>
+                    <div class="price">$9.99 <span>$12.99</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <i class="fas fa-times" id="close-cart"></i>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added dynamically -->
+        </div>
+        <div class="cart-total">
+            <h4>Total: <span>$0.00</span></h4>
+            <button class="btn checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="#home"><i class="fas fa-arrow-right"></i> Home</a>
+                <a href="#menu"><i class="fas fa-arrow-right"></i> Menu</a>
+                <a href="#about"><i class="fas fa-arrow-right"></i> About</a>
+                <a href="#reviews"><i class="fas fa-arrow-right"></i> Reviews</a>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Contact Info</h3>
+                <a href="#"><i class="fas fa-phone"></i> +123-456-7890</a>
+                <a href="#"><i class="fas fa-envelope"></i> info@foodexpress.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> New York, USA</a>
+            </div>
+            
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2023 FoodExpress. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
